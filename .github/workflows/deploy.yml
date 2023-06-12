@@ -20,5 +20,5 @@ jobs:
 
       - name: Deploy to GoDaddy
         run: |
-           ssh -o StrictHostKeyChecking=no -p <port> -o HostKeyAlgorithms=ssh-rsa <username>@<hostname> "cd /home/<user>/Applications && git pull"
+           ssh -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /home/<user>/Applications/MyProfileConnectBackend && git pull"
 

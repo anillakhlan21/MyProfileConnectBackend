@@ -51,7 +51,7 @@ app.post('/api/register', async (req, res) => {
         console.error('Error during registration:', error);
         res.status(500).json({ error: 'An error occurred during registration' });
     }
-});
+}); 
 
 app.post('/api/login', async (req, res) => {
     const { email, password } = req.body;
@@ -85,7 +85,7 @@ app.put('/api/profile', async (req, res) => {
 
     // Get the updated profile data from the request body
     const updatedProfile = req.body;
-    
+
     // Perform the necessary actions to update the profile in your database
     // For example, you can use a user model or ORM to update the user's profile
     const user = await User.findById({ _id })

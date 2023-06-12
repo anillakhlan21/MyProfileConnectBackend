@@ -20,5 +20,5 @@ jobs:
 
       - name: Deploy to GoDaddy
         run: |
-           ssh -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /home/<user>/Applications/MyProfileConnectBackend && git pull"
+           ssh -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "cd /home/aqyxflpn4rpk/Applications/MyProfileConnectBackend && git pull"
 
